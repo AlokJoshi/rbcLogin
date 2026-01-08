@@ -1,5 +1,5 @@
 
-GET http://localhost:3000/users
+GET http://localhost:3000/registeredusers
 Accept: application/json
 
 ###
@@ -35,3 +35,20 @@ Content-Type: application/json
   "password": "def"
 }
 ###
+
+POST http://localhost:3000/changePassword
+Content-Type: application/json
+
+{
+  "username": "abc",
+  "oldPassword": "def",
+  "newPassword": "newdef"
+} 
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "abc",
+  "password": "newdef"
+} 
